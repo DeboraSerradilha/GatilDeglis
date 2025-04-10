@@ -1,0 +1,96 @@
+<app-header></app-header>
+
+
+<div class="container">
+    <div class="content">
+        <h1 class="color-name">ENTRE EM CONTATO </h1>
+        
+        <form [formGroup]="form">
+            <h4>Raça</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Raça</mat-label>
+                <mat-select formControlName="raca" required>
+                    <mat-option value="ragdoll">Ragdoll</mat-option>
+                    <mat-option value="americanCurl">American Curl </mat-option>
+                </mat-select>    
+            </mat-form-field>
+
+
+            <h4>Nome</h4>
+            <mat-form-field appearance="fill">               <!--  pode ser fill (fundo preenchido) ou outline (borda destacada) -->
+                <input  matInput formControlName="nome" type="text" required  placeholder="Digite seu Nome">
+                <mat-error *ngIf="fields.nome?.hasError('required')"> 
+                    O nome é obrigatório.
+                </mat-error>
+                <mat-error *ngIf="fields.nome?.hasError('pattern')"> 
+                    Digite nome e sobrenome corretamente.
+                </mat-error>
+            </mat-form-field>
+        
+        
+            <h4>Email</h4>
+            <mat-form-field appearance="fill">
+                <input matInput formControlName="email" type="email" required  placeholder="Digite seu e-mail">
+                <mat-error *ngIf="fields.email?.hasError('required')">
+                    O e-mail é obrigatório.
+                </mat-error>
+                <mat-error *ngIf="form.get('email')?.hasError('email')">
+                    Digite um e-mail válido.
+                </mat-error>
+            </mat-form-field>
+
+
+            <h4>Telefone</h4>
+            <mat-form-field appearance="fill">
+                <input matInput formControlName="telefone" type="text" placeholder="(99)9999-9999">
+                <mat-error *ngIf="fields.telefone?.hasError('required')">
+                    O telefone é obrigatório.
+                </mat-error>
+                <mat-error *ngIf="fields.telefone?.hasError('pattern')">
+                    Digite um número válido com 10 ou 11 dígitos.
+                </mat-error>
+            </mat-form-field>  
+
+
+            <h4>Cidade</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Cidade</mat-label>
+                <mat-select formControlName="cidade">
+                    <mat-option *ngFor="let cidade of cidades" [value]="cidade">
+                        {{ cidade }}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="fields.cidade?.hasError('required')">
+                    A cidade é obrigatória.
+                </mat-error>
+            </mat-form-field>
+
+
+            <h4> Mensagem </h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Mensagem</mat-label>    <!-- nome do campo  -->
+                <textarea matInput formControlName="mensagem" required></textarea>    <!-- <textarea> (com matInput) → Permite digitar textos longos. -->
+                <mat-error *ngIf="fields.mensagem?.hasError('required')">
+                    A mensagem é obrigatória.</mat-error>
+            </mat-form-field>
+
+        
+            <button mat-raised-button color="primary" type="submit" (click)="showSuccess()">  
+                Enviar
+            </button>
+
+        </form>    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <h3> Digite seu telefone para entrarmos em contato com você</h3>
+<input type="number" [(ngModel)]="telefone">
+
+<button (click)="fazerLigacao()">Ligar</button> -->

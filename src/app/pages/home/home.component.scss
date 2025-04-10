@@ -1,0 +1,24 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 50px;                   /* Precisa colocar para respeitar o espaço do header, que contem 50px, assim o conteudo nao vai ser ''comido'' pelo header. */
+    padding: 20px;
+}
+
+mat-card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color:rgb(29, 131, 226) 
+}
+
+mat-list-item {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.carousel-inner img {
+    height: 400px;       /* ou o tamanho que quiser */
+    object-fit: cover;   /* faz a imagem se ajustar sem distorcer */
+    width: 100%;         /* garante que ocupe toda a largura do carrossel */
+}

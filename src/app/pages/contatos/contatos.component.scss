@@ -1,0 +1,86 @@
+.color-name{
+    color: rgba(43, 19, 179, 0.733);
+    font-weight: bold;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Fundo suave */
+    margin-top: 50px;
+}
+
+.content{
+    width: 90%;
+    max-width: 450px; /* Evita que fique muito largo em telas grandes */
+    background-color: rgb(151, 176, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
+}
+
+
+.content h4 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px; 
+    padding-left: 4px; 
+    color: white;
+    font-size: 1.2rem;           /* o rem se adapta ao comportamento do navegador */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+mat-form-field {
+    width: 100%; /* Faz os inputs ocuparem toda a largura */
+    max-width: 350px; /* Mantém alinhado com os outros campos */
+    margin-bottom: 15px; /* Espaço entre os campos */
+}
+
+
+
+.message{
+    width: 100%;
+    max-width: 350px;
+    height: 40px;
+    padding: 10px;        /* Espaço interno  */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+button{
+    height: 40px;
+    width: 120px;
+    margin-top: 20px;
+    color: white;
+    font-size: 1rem;
+    background-color: rgb(91, 101, 241);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    align-self: center; 
+}
+
+
+button:hover{
+    background-color: rgb(43, 19, 179);
+    transform: scale(1.05);
+}   
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .content {
+        width: 95%;
+        padding: 15px;
+    }
+    .message {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<mat-card class="container">
+    <mat-card-title>BEM-VINDO AO GATIL DEGLIS</mat-card-title>
+    
+    <div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">     <!-- identificador único do carrossel.   o slide faz o carrossel ter animação de deslizamento entre as imagens.   o data-bs-ride="carousel" faz com que ative o bootstrap e ele funcione assim que a pagina carregar -->
+
+        <!-- 🔵 Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- 🖼️ Imagens -->
+        <div class="carousel-inner">    <!-- inner = interior, corpo do carrossel carousel-item: é um slide, ou seja, uma “imagem do carrossel”.  active: diz que essa é a imagem inicial, a primeira que aparece quando o carrossel começa. -->
+          <div class="carousel-item active">
+            <img src="assets/imagens/imagem1.jpg" class="d-block w-100" alt="Imagem 1">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/imagens/imagem2.jpg" class="d-block w-100" alt="Imagem 2">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/imagens/imagem3.jpg" class="d-block w-100" alt="Imagem 3">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/imagens/imagem4.jpg" class="d-block w-100" alt="Imagem 4">
+          </div>
+        </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+
+    <mat-card-content>
+        <p>O berço dos gatinhos de olhos azuis dos seus sonhos! Perfeitos para acompanhar sua vida </p>
+
+        <p>Somos registrados no Clube do Gato do Paraná autorizado pela TICA - The Cat International Cat Association, localizados na cidade de São Paulo.</p>
+
+        <p>Somos uma família de amantes de gatos e a raça Ragdoll particularmente nos encantou pela beleza, porte e temperamento dócil.</p>
+
+        <p>Nossa criação é o resultado de vários processos de estudo pesquisa e planejamento, zelando pelo bem estar animal; 
+            Diante disso escolhemos dar uma alta qualidade nutricional oferecendo sempre rações super premium que proporcionam alta digestibilidade e densidade energética, 
+            além de reduzir o risco do aparecimento de doenças nutricionais 
+        </p>
+
+        <p>São criados livres de gaiolas morando em nossa casa, interagindo com toda família, amados, acariciados, bem cuidados e socializados. 
+            Nossas técnicas de manejo propiciam que nossos gatos tenham uma excelente saúde física e mental e um comportamento dócil retribuindo todo carinho que são dispensados a eles.
+        </p>
+
+        <p>Nossa gestão visa preservar a raça em suas características físicas e comportamental selecionando reprodutores cuidadosamente, 
+            negativos para: 
+            
+            <mat-list>
+                <mat-list-item>🩺 <strong>FIV/FELV</strong> (Vírus da Imunodeficiência Felina e Leucemia Felina)</mat-list-item>
+                <mat-list-item>🩺 <strong>PKD</strong> (Doença do Rim Policístico)</mat-list-item>
+                <mat-list-item>🩺 <strong>HCM</strong> (Cardiomiopatia Hipertrófica)</mat-list-item>
+            </mat-list>
+        </p>
+    </mat-card-content>
+</mat-card>
