@@ -21,4 +21,39 @@ mat-list-item {
     height: 400px;       /* ou o tamanho que quiser */
     object-fit: cover;   /* faz a imagem se ajustar sem distorcer */
     width: 100%;         /* garante que ocupe toda a largura do carrossel */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.imagem-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-central img {
+    width: 300px;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color:rgb(31, 91, 182) 
+}
+
+.imagem-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-final img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    margin-top: 30px;
 }
